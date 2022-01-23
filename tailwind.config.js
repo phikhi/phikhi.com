@@ -1,7 +1,7 @@
 const defaults = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    purge: {
+    // purge: {
         content: [
             'source/**/*.html',
             'source/**/*.md',
@@ -12,7 +12,7 @@ module.exports = {
         options: {
             safelist: [/language/, /hljs/, /mce/],
         },
-    },
+    // },
     theme: {
         extend: {
             fontFamily: {
@@ -42,9 +42,9 @@ module.exports = {
             '6xl': '10rem',
         },
     },
-    variants: {
-        extend: {
-            width: ['focus'],
-        },
-    },
+    // variants: {
+    //     extend: {
+    //         width: ['focus'],
+    //     },
+    // },
 };
