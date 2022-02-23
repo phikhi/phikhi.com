@@ -11,6 +11,13 @@
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
 
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@phikhi">
+        <meta name="twitter:creator" content="@phikhi">
+        <meta name="twitter:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}">
+        <meta name="twitter:description" content="{{ $page->description ?? $page->siteDescription }}">
+        <meta name="twitter:image" content="{{ $page->baseUrl }}/assets/img/phikhi-twitter-card.png">
+
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
