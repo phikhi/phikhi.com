@@ -5,8 +5,8 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => 'https://phikhi.com.test',
     'production' => false,
-    'siteName' => 'Hi! I\'m Phil',
-    'siteDescription' => 'Web Cameleon • I build stuff online',
+    'siteName' => 'phikhi',
+    'siteDescription' => 'Hi! I\'m Phil — Web Cameleon • I build stuff online and I am here to help you if a can',
     'siteAuthor' => 'Philippe Khill',
 
     // collections

@@ -25,3 +25,5 @@ document.querySelectorAll('pre code').forEach((block) => {
 //         Search,
 //     },
 // }).$mount('#vue-search');
+
+document.querySelector('#mlink').innerHTML = window.atob('PGEgaHJlZj0ibWFpbHRvOmhlbGxvQHBoaWtoaS5jb20/c3ViamVjdD1TYXklMjBIaSUyMSZib2R5PUhlbGxvJTIwUGhpbCUyQyUwQSUwQUklMjBnb3QlMjBhJTIwcXVpY2slMjBxdWVzdGlvbiUyMGZvciUyMHlvdS4uLiUwQSUwQSUwQSUwQSIgY2xhc3M9InVuZGVybGluZSBkZWNvcmF0aW9uLWRhc2hlZCI+aGVsbG9AcGhpa2hpLmNvbTwvYT4=');
