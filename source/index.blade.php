@@ -13,7 +13,6 @@
         <span class="flex-1 typing items-center pl-2">find / -iname phikhi</span>
     </p>
     <p class="m-0">
-        <span>&nbsp;</span>
         <span class="text-gray-400 flex-1 typing items-center pl-2">/usr/bin/phikhi</span>
     </p>
     <p class="m-0 mt-2">
@@ -33,7 +32,7 @@
             DESCRIPTION
             <p class="pl-8 my-2">
                 CPO; Part time Product Owner / Developer / UI/UX Designer / SysAdmin.<br>
-                Call whatever you want : Cameleon, Swiss knife 🇨🇭 or schyzophrenic 🥸.<br>
+                Call whatever you want : Cameleon, Swiss knife 🇨🇭 or schizophrenic 🥸.<br>
                 “We” are sure... I can help.
             </p>
         </span>
