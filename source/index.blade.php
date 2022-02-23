@@ -27,7 +27,7 @@
         </span>
         <span class="text-gray-400 flex-1 typing items-center mb-4">
             SYNOPSIS
-            <p class="pl-8 my-2">phikhi {{ '[--lang=<value>] <command> [<args>]' }}</p>
+            <p class="pl-8 my-2">phikhi {{ '[--lang=<🇫🇷|🇺🇸>] <command> [<args>]' }}</p>
         </span>
         <span class="text-gray-400 flex-1 typing items-center mb-4">
             DESCRIPTION
