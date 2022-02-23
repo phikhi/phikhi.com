@@ -10,11 +10,11 @@
     </p>
     <p class="m-0 mt-2">
         <span class="text-green-400">$</span>
-        <span class="flex-1 typing items-center pl-2">whoami</span>
+        <span class="flex-1 typing items-center pl-2">find / -iname phikhi</span>
     </p>
     <p class="m-0">
         <span>&nbsp;</span>
-        <span class="text-gray-400 flex-1 typing items-center pl-2">phikhi</span>
+        <span class="text-gray-400 flex-1 typing items-center pl-2">/usr/bin/phikhi</span>
     </p>
     <p class="m-0 mt-2">
         <span class="text-green-400">$</span>
