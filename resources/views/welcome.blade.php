@@ -37,13 +37,14 @@
             </a>
         </div>
 
-        <nav role="navigation" class="flex flex-col gap-y-2 mt-24 text-2xl font-light">
-        <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded p-1 transition-colors">
-                <span class="font-semibold">about</span>://</a></span>
-            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded p-1 transition-colors">what.<span class="font-semibold">i.do</span></a></span>
-            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded p-1 transition-colors">what.<span class="font-semibold">i.write</span></a></span>
-            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded p-1 transition-colors">/?<span class="font-semibold">lets-chat</span>=true</a></span>
+        <nav role="navigation" class="lg:flex mt-24 text-xl md:text-2xl font-light">
+            <span class="text-pink-500">https://</span>
+            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded hover:px-2 py-1 transition duration-200 text-nowrap"><span class="font-semibold">about.</span></a></span>
+            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded hover:px-2 py-1 transition duration-200 text-nowrap">what-<span class="font-semibold">i.do</span></a></span>
+            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded hover:px-2 py-1 transition duration-200 text-nowrap">/what-<span class="font-semibold">i-publish</span></a></span>
+            <span><a href="#" class="text-pink-500 hover:text-white hover:bg-pink-500 rounded hover:px-2 py-1 transition duration-200 text-nowrap">/?<span class="font-semibold">lets-chat</span>=true</a></span>
         </nav>
+
     </div>
 
 </div>
