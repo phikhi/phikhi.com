@@ -1,32 +1,34 @@
 <!-- Section Contact -->
 <section id="contact" class="py-20 bg-neutral-50 dark:bg-neutral-900">
     <div class="container mx-auto px-6">
-        <div 
-            x-data
-            x-intersect:enter="$el.classList.add('opacity-100', 'translate-y-0'); $el.classList.remove('opacity-0', 'translate-y-8')"
-            class="text-center mb-16 transition-all duration-1000 opacity-0 translate-y-8"
+        <div
+                x-data
+                x-intersect:enter="$el.classList.add('opacity-100', 'translate-y-0'); $el.classList.remove('opacity-0', 'translate-y-8')"
+                class="text-center mb-16 transition-all duration-1000 opacity-0 translate-y-8"
+                id="contact-heading"
         >
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Discutons de votre projet</h2>
             <p class="text-xl text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto">
                 Vous avez un projet en tête ? N'hésitez pas à me contacter pour en discuter.
             </p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Informations de contact -->
-            <div 
-                x-data
-                x-intersect:enter="$el.classList.add('opacity-100', 'translate-x-0'); $el.classList.remove('opacity-0', '-translate-x-8')"
-                class="transition-all duration-1000 opacity-0 -translate-x-8"
+            <div
+                    x-data
+                    x-intersect:enter="$el.classList.add('opacity-100', 'translate-x-0'); $el.classList.remove('opacity-0', '-translate-x-8')"
+                    class="transition-all duration-1000 opacity-0 -translate-x-8"
+                    id="contact-info"
             >
                 <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-sm p-8">
                     <h3 class="text-2xl font-bold mb-6">Mes coordonnées</h3>
-                    
+
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                             </div>
                             <div>
@@ -34,34 +36,36 @@
                                 <a href="mailto:contact@phikhi.com" class="text-primary-600 dark:text-primary-400 hover:underline">contact@phikhi.com</a>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-secondary-100 dark:bg-secondary-900 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-600 dark:text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="text-lg font-semibold mb-1">Téléphone</h4>
-                                <a href="tel:+33612345678" class="text-secondary-600 dark:text-secondary-400 hover:underline">+33 6 12 34 56 78</a>
+                                <a href="tel:+33612345678" class="text-secondary-600 dark:text-secondary-400 hover:underline">+33
+                                    6 12 34 56 78</a>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-tertiary-100 dark:bg-tertiary-900 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-tertiary-600 dark:text-tertiary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="text-lg font-semibold mb-1">Localisation</h4>
                                 <p class="text-neutral-700 dark:text-neutral-300">Paris, France</p>
-                                <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-1">Disponible pour des missions à distance ou sur site</p>
+                                <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-1">Disponible pour des
+                                    missions à distance ou sur site</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8">
                         <h4 class="text-lg font-semibold mb-4">Suivez-moi</h4>
                         <div class="flex space-x-4">
@@ -89,143 +93,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Formulaire de contact -->
-            <div 
-                x-data="{
-                    form: {
-                        name: '',
-                        email: '',
-                        subject: '',
-                        message: ''
-                    },
-                    errors: {},
-                    loading: false,
-                    success: false,
-                    
-                    submitForm() {
-                        this.loading = true;
-                        this.errors = {};
-                        
-                        // Simulation d'envoi de formulaire
-                        setTimeout(() => {
-                            this.loading = false;
-                            this.success = true;
-                            
-                            // Reset form
-                            this.form = {
-                                name: '',
-                                email: '',
-                                subject: '',
-                                message: ''
-                            };
-                            
-                            // Reset success message after 5 seconds
-                            setTimeout(() => {
-                                this.success = false;
-                            }, 5000);
-                        }, 1500);
-                    }
-                }"
-                x-intersect:enter="$el.classList.add('opacity-100', 'translate-x-0'); $el.classList.remove('opacity-0', 'translate-x-8')"
-                class="transition-all duration-1000 opacity-0 translate-x-8"
+            <div
+                    x-intersect:enter="$el.classList.add('opacity-100', 'translate-x-0'); $el.classList.remove('opacity-0', 'translate-x-8')"
+                    class="transition-all duration-1000 opacity-0 translate-x-8"
+                    id="contact-form-container"
             >
-                <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-sm p-8">
-                    <h3 class="text-2xl font-bold mb-6">Envoyez-moi un message</h3>
-                    
-                    <form @submit.prevent="submitForm">
-                        <div class="space-y-6">
-                            <!-- Alert de succès -->
-                            <div 
-                                x-show="success" 
-                                x-transition:enter="transition ease-out duration-300"
-                                x-transition:enter-start="opacity-0 transform -translate-y-2"
-                                x-transition:enter-end="opacity-100 transform translate-y-0"
-                                x-transition:leave="transition ease-in duration-300"
-                                x-transition:leave-start="opacity-100 transform translate-y-0"
-                                x-transition:leave-end="opacity-0 transform -translate-y-2"
-                                class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-4 rounded-lg mb-6"
-                            >
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Nom -->
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Nom complet</label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    x-model="form.name" 
-                                    class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white"
-                                    required
-                                >
-                                <p x-show="errors.name" x-text="errors.name" class="mt-1 text-sm text-red-600 dark:text-red-400"></p>
-                            </div>
-                            
-                            <!-- Email -->
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Email</label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    x-model="form.email" 
-                                    class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white"
-                                    required
-                                >
-                                <p x-show="errors.email" x-text="errors.email" class="mt-1 text-sm text-red-600 dark:text-red-400"></p>
-                            </div>
-                            
-                            <!-- Sujet -->
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Sujet</label>
-                                <input 
-                                    type="text" 
-                                    id="subject" 
-                                    x-model="form.subject" 
-                                    class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white"
-                                    required
-                                >
-                                <p x-show="errors.subject" x-text="errors.subject" class="mt-1 text-sm text-red-600 dark:text-red-400"></p>
-                            </div>
-                            
-                            <!-- Message -->
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Message</label>
-                                <textarea 
-                                    id="message" 
-                                    x-model="form.message" 
-                                    rows="5" 
-                                    class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white"
-                                    required
-                                ></textarea>
-                                <p x-show="errors.message" x-text="errors.message" class="mt-1 text-sm text-red-600 dark:text-red-400"></p>
-                            </div>
-                            
-                            <!-- Bouton d'envoi -->
-                            <div>
-                                <button 
-                                    type="submit" 
-                                    class="w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white font-medium rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-800"
-                                    :disabled="loading"
-                                >
-                                    <span x-show="!loading">Envoyer le message</span>
-                                    <span x-show="loading" class="flex items-center justify-center">
-                                        <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                        </svg>
-                                        Envoi en cours...
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <livewire:components.contact-form/>
             </div>
         </div>
     </div>
