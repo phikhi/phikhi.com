@@ -20,10 +20,10 @@
                 class="bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm transition-all duration-1000 opacity-0 scale-95 hover:shadow-md"
                 style="transition-delay: 100ms;"
             >
-                <div class="h-2 bg-primary-600 dark:bg-primary-500"></div>
+                <div class="h-2 bg-blue-600 dark:bg-blue-500"></div>
                 <div class="p-8">
-                    <div class="w-14 h-14 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
                     </div>
@@ -33,25 +33,25 @@
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Analyse de marché et concurrentielle</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Définition de la vision produit</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Création de roadmap stratégique</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Définition des KPIs et objectifs</span>
@@ -59,7 +59,7 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-xl font-bold">À partir de 5 000€</span>
-                        <a href="#contact" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium hover:underline">
+                        <a href="#contact" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:underline">
                             En savoir plus
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -76,10 +76,10 @@
                 class="bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm transition-all duration-1000 opacity-0 scale-95 hover:shadow-md"
                 style="transition-delay: 200ms;"
             >
-                <div class="h-2 bg-secondary-600 dark:bg-secondary-500"></div>
+                <div class="h-2 bg-indigo-600 dark:bg-indigo-500"></div>
                 <div class="p-8">
-                    <div class="w-14 h-14 bg-secondary-100 dark:bg-secondary-900 rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary-600 dark:text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                         </svg>
                     </div>
@@ -89,25 +89,25 @@
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 dark:text-secondary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 dark:text-indigo-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Recherche utilisateur</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 dark:text-secondary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 dark:text-indigo-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Wireframing et prototypage</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 dark:text-secondary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 dark:text-indigo-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Tests utilisateurs</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 dark:text-secondary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 dark:text-indigo-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Design d'interface utilisateur</span>
@@ -115,7 +115,7 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-xl font-bold">À partir de 3 500€</span>
-                        <a href="#contact" class="inline-flex items-center text-secondary-600 dark:text-secondary-400 font-medium hover:underline">
+                        <a href="#contact" class="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-medium hover:underline">
                             En savoir plus
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -132,10 +132,10 @@
                 class="bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm transition-all duration-1000 opacity-0 scale-95 hover:shadow-md"
                 style="transition-delay: 300ms;"
             >
-                <div class="h-2 bg-tertiary-600 dark:bg-tertiary-500"></div>
+                <div class="h-2 bg-purple-600 dark:bg-purple-500"></div>
                 <div class="p-8">
-                    <div class="w-14 h-14 bg-tertiary-100 dark:bg-tertiary-900 rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-tertiary-600 dark:text-tertiary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                         </svg>
                     </div>
@@ -145,25 +145,25 @@
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tertiary-600 dark:text-tertiary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Mise en place de Scrum/Kanban</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tertiary-600 dark:text-tertiary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Priorisation de backlog</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tertiary-600 dark:text-tertiary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Facilitation des cérémonies agiles</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tertiary-600 dark:text-tertiary-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Coaching d'équipe</span>
@@ -171,7 +171,7 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-xl font-bold">À partir de 4 000€</span>
-                        <a href="#contact" class="inline-flex items-center text-tertiary-600 dark:text-tertiary-400 font-medium hover:underline">
+                        <a href="#contact" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-medium hover:underline">
                             En savoir plus
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -188,7 +188,7 @@
             x-intersect:enter="$el.classList.add('opacity-100', 'translate-y-0'); $el.classList.remove('opacity-0', 'translate-y-8')"
             class="mt-16 text-center transition-all duration-1000 opacity-0 translate-y-8"
         >
-            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
                 Discuter de votre projet
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />

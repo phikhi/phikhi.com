@@ -124,7 +124,7 @@
                     <template x-for="(testimonial, index) in testimonials" :key="index">
                         <button 
                             @click="activeIndex = index"
-                            :class="`w-2.5 h-2.5 rounded-full transition-colors ${activeIndex === index ? 'bg-primary-600 dark:bg-primary-500' : 'bg-neutral-300 dark:bg-neutral-600'}`"
+                            :class="`w-2.5 h-2.5 rounded-full transition-colors ${activeIndex === index ? 'bg-blue-600 dark:bg-blue-500' : 'bg-neutral-300 dark:bg-neutral-600'}`"
                         ></button>
                     </template>
                 </div>
