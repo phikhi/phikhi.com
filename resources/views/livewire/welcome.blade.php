@@ -6,21 +6,8 @@ use Illuminate\Support\Facades\Auth;
 // Définir le layout à utiliser
 layout('components.layouts.guest');
 
-// État pour le mode sombre/clair
-state(['darkMode' => false]);
-
 // État pour l'utilisateur (pour éviter les erreurs avec Auth::user()->name)
 state(['user' => null]);
-
-$toggleDarkMode = function () {
-    $this->darkMode = !$this->darkMode;
-};
-
-// Détecter automatiquement le mode sombre/clair du système
-$initDarkMode = function () {
-    $this->darkMode = false;
-    $this->dispatch('dark-mode-changed', $this->darkMode);
-};
 
 ?>
 
@@ -28,49 +15,68 @@ $initDarkMode = function () {
         x-data="{
             scrolled: false,
             activeSection: 'hero',
-            sections: ['hero', 'expertise', 'experience', 'services', 'testimonials', 'contact']
+            mobileMenuOpen: false,
+            showBackToTop: false,
+            sections: ['hero', 'expertise', 'experience', 'services', 'testimonials', 'contact'],
+            scrollToSection(sectionId) {
+                // Empêcher le comportement par défaut du lien
+                event.preventDefault();
+                
+                // Fermer le menu mobile si ouvert
+                this.mobileMenuOpen = false;
+                
+                // Si sectionId est 'top', défiler vers le haut de la page
+                if (sectionId === 'top') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Mettre à jour la section active
+                    this.activeSection = 'hero';
+                    
+                    // Mettre à jour l'URL sans ancre
+                    history.pushState(null, '', window.location.pathname + window.location.search);
+                    return;
+                }
+                
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    // Défilement fluide vers la section
+                    element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Mettre à jour la section active
+                    this.activeSection = sectionId;
+                    
+                    // Mettre à jour l'URL avec l'ID de la section sans recharger la page
+                    history.pushState(null, '', '#' + sectionId);
+                }
+            }
         }"
         x-init="
             window.addEventListener('scroll', () => {
-                scrolled = window.scrollY > 50;
+                scrolled = window.scrollY > 20;
                 
-                // Déterminer la section active pendant le défilement
-                sections.forEach(section => {
+                // Détection de la section active au défilement
+                for (const section of sections) {
                     const el = document.getElementById(section);
                     if (el) {
                         const rect = el.getBoundingClientRect();
-                        if (rect.top <= 100 && rect.bottom >= 100) {
+                        const offset = window.innerHeight * 0.3;
+                        
+                        if (rect.top <= offset && rect.bottom >= offset) {
                             activeSection = section;
+                            // Afficher le bouton de retour en haut uniquement si on a dépassé la section hero
+                            showBackToTop = activeSection !== 'hero';
+                            break;
                         }
                     }
-                });
-            });
-            
-            // Fonction pour le défilement fluide
-            document.querySelectorAll('a[href^=\'#\']').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        // Mettre à jour l'URL avec l'ancre
-                        window.history.pushState(null, '', this.getAttribute('href'));
-                        
-                        // Calculer l'offset pour tenir compte du header fixe
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+                }
             });
         "
-        :class="{ 'dark': $wire.darkMode }"
         class="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white"
 >
     <!-- Header -->
@@ -81,14 +87,19 @@ $initDarkMode = function () {
     >
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="text-2xl font-bold tracking-tight">
+            <a
+                    href="/"
+                    @click="scrollToSection('top')"
+                    class="text-2xl font-bold tracking-tight"
+            >
                 Philippe Khill
             </a>
 
             <!-- Navigation - Desktop -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a
-                        href="#hero"
+                        href="/"
+                        @click="scrollToSection('top')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'hero' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -96,6 +107,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#expertise"
+                        @click="scrollToSection('expertise')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'expertise' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -103,6 +115,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#experience"
+                        @click="scrollToSection('experience')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'experience' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -110,6 +123,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#services"
+                        @click="scrollToSection('services')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'services' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -117,6 +131,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#testimonials"
+                        @click="scrollToSection('testimonials')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'testimonials' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -124,6 +139,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#contact"
+                        @click="scrollToSection('contact')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'contact' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -132,14 +148,14 @@ $initDarkMode = function () {
 
                 <!-- Dark Mode Toggle -->
                 <button
-                        wire:click="toggleDarkMode"
+                        x-on:click="$flux.dark = ! $flux.dark;"
                         class="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
                         aria-label="Toggle dark mode"
                 >
-                    <svg x-show="!$wire.darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg x-show="!$flux.dark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                     </svg>
-                    <svg x-show="$wire.darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg x-show="$flux.dark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                     </svg>
                 </button>
@@ -147,7 +163,7 @@ $initDarkMode = function () {
 
             <!-- Mobile Menu Button -->
             <button
-                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    x-on:click="mobileMenuOpen = !mobileMenuOpen"
                     class="md:hidden p-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                     aria-label="Toggle mobile menu"
             >
@@ -173,8 +189,8 @@ $initDarkMode = function () {
         >
             <nav class="container mx-auto px-6 py-4 flex flex-col space-y-4">
                 <a
-                        href="#hero"
-                        @click="mobileMenuOpen = false"
+                        href="/"
+                        @click="scrollToSection('top')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'hero' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -182,7 +198,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#expertise"
-                        @click="mobileMenuOpen = false"
+                        @click="scrollToSection('expertise')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'expertise' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -190,7 +206,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#experience"
-                        @click="mobileMenuOpen = false"
+                        @click="scrollToSection('experience')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'experience' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -198,7 +214,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#services"
-                        @click="mobileMenuOpen = false"
+                        @click="scrollToSection('services')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'services' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -206,7 +222,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#testimonials"
-                        @click="mobileMenuOpen = false"
+                        @click="scrollToSection('testimonials')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'testimonials' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -214,7 +230,7 @@ $initDarkMode = function () {
                 </a>
                 <a
                         href="#contact"
-                        @click="mobileMenuOpen = false"
+                        @click="scrollToSection('contact')"
                         :class="{ 'text-primary-600 dark:text-primary-400': activeSection === 'contact' }"
                         class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
@@ -225,14 +241,14 @@ $initDarkMode = function () {
                 <div class="flex items-center justify-between">
                     <span>Mode sombre</span>
                     <button
-                            wire:click="toggleDarkMode"
+                            x-on:click="$flux.dark = ! $flux.dark;"
                             class="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
                             aria-label="Toggle dark mode"
                     >
-                        <svg x-show="!$wire.darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg x-show="!$flux.dark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                         </svg>
-                        <svg x-show="$wire.darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg x-show="$flux.dark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                         </svg>
                     </button>
@@ -240,6 +256,24 @@ $initDarkMode = function () {
             </nav>
         </div>
     </header>
+
+    <!-- Bouton de retour en haut de page -->
+    <button
+            x-show="showBackToTop"
+            @click="scrollToSection('top')"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 translate-y-4"
+            class="cursor-pointer fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary-600 text-gray-500 dark:text-white shadow-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all"
+            aria-label="Retour en haut de page"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
 
     <!-- Contenu principal -->
     <main>
